@@ -13,7 +13,7 @@ int ganhar = 0;
 void desenho(int qual); //faz o desenho da forca
 
 //Mete a palavra em linhas, ex. Olá -> _ _ _
-int linhas_palavra() {
+int linhas_palavra(){
     int numero = 0;
     for(int i = 0; i < strlen(palavra); i++){
         if(palavra[i] == '-'){
@@ -65,20 +65,16 @@ void inserir(int opcao){
         if(a == 0){ganhar = 1;}
         else{vida = 5;}
     }
-
     jogadas++;
     if(certo == 0){vida++;}
     else{
         for (int i = 0; i < strlen(palavra); i++){
             if(palavra[i] == palavra_incompleta[i]){owo++;}
-        }
-        
+        }    
     }
-    if (owo == strlen(palavra))
-    {
+    if (owo == strlen(palavra)){
         ganhar = 1;
-    }
-    
+    }   
 }
 
 //Dá print ás letras usadas
